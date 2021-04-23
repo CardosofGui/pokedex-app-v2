@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".features.pokemon_list.Pokemon_List">
+    tools:context=".presenter.pokemon_list.Pokemon_List">
 
     <LinearLayout
         android:id="@+id/llnToolbar"
@@ -78,7 +78,8 @@
         android:layout_alignTop="@+id/viewShape"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible"
+        tools:visibility="gone">
 
         <pl.droidsonroids.gif.GifImageView
             android:layout_width="100dp"
@@ -90,14 +91,6 @@
             android:layout_height="wrap_content"
             android:text="CARREGANDO POKEMONS"
             android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtLoadingPokemons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0/898"
-            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -123,9 +116,9 @@
             android:id="@+id/filterGenerationType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:background="@color/white">
+            android:visibility="gone">
 
             <View
                 android:layout_width="match_parent"
@@ -165,41 +158,6 @@
 
                     <LinearLayout
                         android:id="@+id/llnGenerations"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
-
-
-                    </LinearLayout>
-                </HorizontalScrollView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:clickable="false"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:padding="5dp"
-                    android:text="Tipos"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:id="@+id/llnTypes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"

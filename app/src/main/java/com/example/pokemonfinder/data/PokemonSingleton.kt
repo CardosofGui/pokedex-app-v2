@@ -1,6 +1,6 @@
-package com.example.pokemonfinder
+package com.example.pokemonfinder.data
 
-import com.example.pokemonfinder.model.PokemonModel
+import com.example.pokemonfinder.domain.PokemonModel
 
 object PokemonSingleton{
     var pokemonList = mutableListOf<PokemonModel>()

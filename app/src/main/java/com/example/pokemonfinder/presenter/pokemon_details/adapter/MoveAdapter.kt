@@ -1,4 +1,4 @@
-package com.example.pokemonfinder.features.pokemon_details.adapter
+package com.example.pokemonfinder.presenter.pokemon_details.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,8 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonfinder.R
-import com.example.pokemonfinder.model.IndexMoves
-import com.example.pokemonfinder.model.PokemonModel
+import com.example.pokemonfinder.domain.IndexMoves
 import kotlinx.android.synthetic.main.move_item.view.*
 
 class MoveAdapter(

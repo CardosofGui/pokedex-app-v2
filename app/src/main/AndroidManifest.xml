@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PokemonFinder">
-        <activity android:name=".features.pokemon_details.Pokemon_Details"></activity>
-        <activity android:name=".features.pokemon_list.Pokemon_List">
+        <activity android:name="com.example.pokemonfinder.presenter.pokemon_details.Pokemon_Details"></activity>
+        <activity android:name="com.example.pokemonfinder.presenter.pokemon_list.Pokemon_List">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

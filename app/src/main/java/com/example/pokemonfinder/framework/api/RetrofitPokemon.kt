@@ -1,4 +1,4 @@
-package com.example.pokemonfinder.api
+package com.example.pokemonfinder.framework.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,7 +12,7 @@ class RetrofitPokemon {
     }
 
     companion object {
-        private const val URL_API = "https://pokeapi.co/api/v2/pokemon/"
+        private const val URL_API = "https://pokeapi.co/api/v2/"
 
         var retrofitPokemon : RetrofitPokemon? = null
 

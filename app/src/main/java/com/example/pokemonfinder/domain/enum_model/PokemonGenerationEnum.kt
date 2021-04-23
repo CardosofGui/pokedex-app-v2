@@ -1,4 +1,4 @@
-package com.example.pokemonfinder.model
+package com.example.pokemonfinder.domain.enum_model
 
 enum class PokemonGenerationEnum(val geracao : Int, val firstPokemon : Int, val lastPokemon : Int, val texto : String, val limite : Int) {
     GERACAO_ALL(0, 1, 898, "Todos Pokemons", 898),

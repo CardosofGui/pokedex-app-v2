@@ -1,4 +1,4 @@
-package com.example.pokemonfinder.model
+package com.example.pokemonfinder.domain.enum_model
 
 import com.example.pokemonfinder.R
 
