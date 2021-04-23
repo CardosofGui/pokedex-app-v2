@@ -43,6 +43,8 @@ class Pokemon_Details : AppCompatActivity() {
     private fun initObserver() {
         pokemonDetailsViewModel.pokemonDetails.observe(this, Observer {pokemonSelecionado ->
             if(pokemonSelecionado != null){
+                hideLoading()
+
                 txtHabilidadesPokemonDetails.text = pokemonSelecionado.getAbilities()
                 txtNomePokemonDetails.text = pokemonSelecionado.name
                 txtNomePokemonDetails.text = pokemonSelecionado.name?.capitalize()
@@ -57,6 +59,7 @@ class Pokemon_Details : AppCompatActivity() {
                 val typePrimary = pokemonSelecionado.types?.get(0)?.type?.name
                 txtType1PokemonDetails.text = typePrimary?.capitalize()
                 txtType1PokemonDetails.setBackgroundColor(getColor(pokemonSelecionado.getColor(typePrimary)))
+                window.statusBarColor = getColor(pokemonSelecionado.getColor(typePrimary))
 
                 if(pokemonSelecionado.types?.size == 2){
                     val typeSecondary = pokemonSelecionado.types[1].type.name
@@ -66,6 +69,8 @@ class Pokemon_Details : AppCompatActivity() {
                 }
 
                 initRecycler(pokemonSelecionado)
+            }else{
+                showLoading()
             }
         })
     }
@@ -109,5 +114,15 @@ class Pokemon_Details : AppCompatActivity() {
         recyclerViewMoves.isNestedScrollingEnabled = false
         recyclerViewMoves.adapter = adapter
         recyclerViewMoves.layoutManager = GridLayoutManager(this, 3)
+    }
+
+    private fun hideLoading(){
+        pokemonInformation.visibility = View.VISIBLE
+        llnLoadingPokemonDetails.visibility = View.GONE
+    }
+
+    private fun showLoading(){
+        pokemonInformation.visibility = View.GONE
+        llnLoadingPokemonDetails.visibility = View.VISIBLE
     }
 }

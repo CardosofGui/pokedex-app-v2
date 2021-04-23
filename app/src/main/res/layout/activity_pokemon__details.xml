@@ -8,6 +8,28 @@
     android:orientation="vertical"
     tools:context=".presenter.pokemon_details.Pokemon_Details">
 
+    <LinearLayout
+        android:id="@+id/llnLoadingPokemonDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pikachu_running_loading" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARREGANDO..."
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <View
         android:id="@+id/viewColorType"
@@ -114,7 +136,9 @@
         android:layout_alignBottom="@+id/pokemonDetails"
         android:background="#94AFAFAF" />
 
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/pokemonInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/viewShape"
